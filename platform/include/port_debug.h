@@ -169,6 +169,9 @@ void SetFullscreen(bool enabled);
 // 0 = auto (native, driven by the display scale), otherwise a fixed multiplier.
 float RenderScale();
 void SetRenderScale(float scale);
+// The highest fixed scale (3840 lines: a 4K display supersampled ~1.8x). Aurora fits the
+// EFB inside the device's texture size limit, so a wide window can draw a little less.
+constexpr float kRenderScaleMax = 8.f;
 // Photo mode captures: the configured scale (auto: the scale the window's own size
 // is, as a multiple of what 1x draws), and a temporary override
 // (0 = none) that also holds dynamic resolution still.

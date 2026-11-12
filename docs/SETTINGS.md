@@ -82,11 +82,12 @@
   touch controls, bindings, cheats, save states, the randomizer and Archipelago,
   rich presence and the timer stay available; the settings it forces are greyed
   out in F1.
-- Resolution scale (F1 > Video > Quality, persisted as `render_scale`): 1x-4x of the GameCube's
+- Resolution scale (F1 > Video > Quality, persisted as `render_scale`): 1x-8x of the GameCube's
   640x528 EFB, shown with the lines it draws (1x is 480p in NTSC), or the window's own size with
   "Auto render scale". Above 2x it
   supersamples (4x at 16:9 is 3755x2112; with MSAA 4 the targets take
-  several hundred MB). "Dynamic
+  several hundred MB, at 8x about 2 GB). The frame buffer is shrunk to fit the GPU's
+  texture size limit (usually 8192 or 16384). "Dynamic
   resolution" (`dynamic_resolution`) lowers the scale while the GPU cannot hold the
   "Frame rate target" (`dynamic_res_target`, 30-500 fps, 0 = "Display", the
   display's rate, however high; never above the frame rate cap), down to "Minimum resolution
