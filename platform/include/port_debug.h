@@ -813,6 +813,12 @@ void SetStickAimRate(float pixelsPerSecond);
 // overlay's own while touch is active.
 bool FlickStick();
 void SetFlickStick(bool enabled);
+// Controller settings > Precise stick deadzones (precise_stick_deadzones, env
+// MP_PRECISE_STICK_DEADZONES, default off): the Stick / C-stick deadzone sliders are the only
+// deadzone. Tilt past a slider runs from zero, and the game's own PADClamp cut (15 of 127 per
+// axis) is offset away, so a stick moves Samus and the aim from its first step past the slider.
+bool PreciseStickDeadZones();
+void SetPreciseStickDeadZones(bool enabled);
 void SetTouchFlickStick(bool enabled);
 // Flick stick's outer deadzone as a fraction of travel (flick_stick_outer_deadzone).
 float FlickOuterDeadZone();
