@@ -401,7 +401,7 @@
   `MP_PRECISE_STICK_DEADZONES=1`): the Stick and C-stick deadzone sliders become
   the only deadzone. Tilt past a slider runs from zero instead of jumping in at
   its edge, and each stick axis reaches the game from 17 of 127 up, past the 15
-  its PADClamp drops (retail's ~12% dead tilt, left even with a slider at 0).
+  PADClamp drops (retail's ~12% dead tilt, left even with a slider at 0).
   Twin-stick aim and flick stick follow it; off, the pad status is unchanged.
 - Steam Input back buttons (Controls > Touch & gyro, persisted as
   `steam_input_back_buttons`, default on, env `MP_STEAM_INPUT_BACK_BUTTONS`;
