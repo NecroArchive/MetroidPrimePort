@@ -1194,6 +1194,8 @@ bool PromptButtonInput(unsigned padButton, PortInput::Family family, Input& out)
   return PromptInputFor({menu->menu, game}, family, out);
 }
 
+uint16_t PromptContexts() { return GameContexts(); }
+
 bool PromptAxisInput(PADAxis axis, PortInput::Family family, Input& out) {
   // On the map a bound map row (rotate on the control stick, pan on the C-stick) comes first.
   const Action game = PadAxisAction(axis);
